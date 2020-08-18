@@ -3,11 +3,9 @@ package controller.controls;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.io.IOException;
-
 import controller.Command;
 import controller.CommandHistory;
 import controller.iShape;
-import model.Point;
 import model.applicationStateContext;
 import model.shapeFactory;
 import view.interfaces.PaintCanvasBase;
@@ -15,8 +13,6 @@ import view.interfaces.PaintCanvasBase;
 public class DeleteCommand implements Command, IUndoable {
     public Graphics2D graphics2D;
     public SelectedShapesList unSelectedShapesList;
-    Point startPoint;
-    Point endPoint;
     PaintCanvasBase paintCanvas;
     iShape iShape;
     iShape lastShape;

@@ -6,8 +6,6 @@ package controller.controls;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.io.IOException;
-import java.util.ArrayList;
-
 import controller.Command;
 import controller.CommandHistory;
 import controller.iShape;

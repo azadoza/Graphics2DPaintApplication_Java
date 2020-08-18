@@ -30,18 +30,18 @@ public class SelectShapesCommand implements Command{
     public void run() throws IOException {
 	System.out.println("Running shapeSelector");
 	iShape = model.shapeFactory.shapeMaker(paintCanvas, ShapeType.RECTANGLE, startPoint, endPoint, ShapeColor.BLACK, ShapeColor.BLACK, ShapeShadingType.OUTLINE);
-	iShape.draw(shapesList);
+	iShape.draw();
 	System.out.println(shapesList.returnSelectedShapesList().size());
 	for (controller.iShape shape : shapesList.returnSelectedShapesList()) {
 	    System.out.println("Shape: start: " + shape.startPoint().getX() + " " + shape.startPoint().getY() + " end: " + shape.endPoint().getX() + "" + shape.endPoint().getY());
 	    System.out.println("Select: start: " + startPoint.getX() + " " + startPoint.getY() + " end: " + endPoint.getX() + " " + endPoint.getY());
 	    
-	    if (shape.startPoint().getX() >= startPoint.getX() && 
-		    shape.startPoint().getY() >= startPoint.getY() && 
+	    if (shape.startPoint().getX() > startPoint.getX() && 
+		    shape.startPoint().getY() > startPoint.getY() && 
 		    shape.endPoint().getX() <= endPoint.getX() && 
 		    shape.endPoint().getY() <= endPoint.getY()) {
 		appState.getSSL().add(shape);
-		iShape.draw(shapesList);
+		iShape.draw();
 		System.out.println("Selected Shape " + shape);
 	    }
 	    

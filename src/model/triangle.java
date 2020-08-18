@@ -1,13 +1,10 @@
 package model;
 
 import java.awt.BasicStroke;
-import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
-
 import controller.iColorfulShape;
 import controller.iShape;
-import controller.controls.SelectedShapesList;
 import view.interfaces.PaintCanvasBase;
 
 public class triangle implements iShape {
@@ -107,32 +104,21 @@ public void draw() {
 	}
    }
 
-@Override
-public void draw(SelectedShapesList selectedShapesList) {
-    Graphics2D graphics2d = paintCanvas.getGraphics2D();
-    Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
-    graphics2d.setStroke(stroke);
-    graphics2d.setColor(primaryColorChose.getColor(primaryColor));
-    width = width() + 5;
-    height = height() + 5;
-    graphics2d.drawPolygon(new int[] {
-	    startPoint.getX(), endPoint.getX(), startPoint.getY() }, new int[] {
-		    startPoint.getY(), endPoint.getY(), endPoint.getY() },
-	    3);
-    
-}
+//@Override
+//public void draw(SelectedShapesList selectedShapesList) {
+//    Graphics2D graphics2d = paintCanvas.getGraphics2D();
+//    Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+//    graphics2d.setStroke(stroke);
+//    graphics2d.setColor(primaryColorChose.getColor(primaryColor));
+//    width = width() + 5;
+//    height = height() + 5;
+//    graphics2d.drawPolygon(new int[] {
+//	    startPoint.getX(), endPoint.getX(), startPoint.getY() }, new int[] {
+//		    startPoint.getY(), endPoint.getY(), endPoint.getY() },
+//	    3);
+//    
+//}
 
-@Override
-public void xShift(int xAxis) {
-    // TODO Auto-generated method stub
-    
-}
-
-@Override
-public void yShift(int yAxis) {
-    // TODO Auto-generated method stub
-    
-}
 
 @Override
 public StartAndEndPointMode seMode() {

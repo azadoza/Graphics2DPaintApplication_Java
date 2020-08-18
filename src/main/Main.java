@@ -1,20 +1,15 @@
 package main;
 
 import controller.IJPaintController;
-import model.*;
 import controller.JPaintController;
 import controller.MouseListener;
-import controller.iShape;
 import model.applicationStateContext;
-import model.interfaces.IApplicationState;
-import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
 import view.gui.PaintCanvas;
 import view.interfaces.IGuiWindow;
 import view.interfaces.PaintCanvasBase;
 import view.interfaces.IUiModule;
-import model.IShapeCommand;
 
 public class Main {
     public static void main(String[] args){

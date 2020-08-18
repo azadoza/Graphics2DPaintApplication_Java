@@ -11,6 +11,8 @@ import view.interfaces.IUiModule;
 
 import java.io.Serializable;
 
+import controller.controls.SelectedShapesList;
+
 public class ApplicationState implements IApplicationState, Serializable {
     private static final long serialVersionUID = -5545483996576839009L;
     private final IUiModule uiModule;
@@ -84,5 +86,47 @@ public class ApplicationState implements IApplicationState, Serializable {
         activeSecondaryColor = ShapeColor.GREEN;
         activeShapeShadingType = ShapeShadingType.FILLED_IN;
         activeStartAndEndPointMode = StartAndEndPointMode.DRAW;
+    }
+
+    @Override
+    public SelectedShapesList getSSL() {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+    @Override
+    public SelectedShapesList getShapeList() {
+	// TODO Auto-generated method stub
+	return null;
+    }
+
+    @Override
+    public void deleteShapes() {
+	// TODO Auto-generated method stub
+	
+    }
+
+    @Override
+    public void copyShapes() {
+	// TODO Auto-generated method stub
+	
+    }
+
+    @Override
+    public void pasteShapes() {
+	// TODO Auto-generated method stub
+	
+    }
+
+    @Override
+    public void undoShapes() {
+	// TODO Auto-generated method stub
+	
+    }
+
+    @Override
+    public void redoShapes() {
+	// TODO Auto-generated method stub
+	
     }
 }

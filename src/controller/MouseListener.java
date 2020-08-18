@@ -1,8 +1,8 @@
 package controller;
 
-import model.IShapeCommand;
 import model.Point;
 import model.ShapeColor;
+import model.ShapeCommand;
 import model.ShapeShadingType;
 import model.ShapeType;
 import model.StartAndEndPointMode;
@@ -69,7 +69,7 @@ public class MouseListener extends MouseAdapter {
 	
 	StartAndEndPointMode startEndMode = appState.getActiveStartAndEndPointMode();
 	if (startEndMode == StartAndEndPointMode.DRAW) {
-	    command = new IShapeCommand(paintCanvas, startPoint, endPoint, appState);
+	    command = new ShapeCommand(paintCanvas, startPoint, endPoint, appState);
 	    try {
 		System.out.print("***DRAW SHAPE MODE*** \n");
 		command.run();
