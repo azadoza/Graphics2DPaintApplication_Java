@@ -1,0 +1,2 @@
+# Graphics2DPaintApplication_Java
+  A low quality microsoft paint style application written in Java using Java2 SDK 1.8.  This program can make ellipses, triangles, and rectangles. These three shapes can be created in 13 different colors with three different styles, solid (filled_in), outline, and solid with an outline. Shapes can be moved across the canvas, copied and pasted, and deleted. All commands can also be undone, and undos can be redone.
